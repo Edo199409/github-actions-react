@@ -1,0 +1,8 @@
+name: Print pr request contest
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: macos-latest
+    steps:
+      - name: Print context
+        run: echo "{{ github }}"
