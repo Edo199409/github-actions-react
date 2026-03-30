@@ -22,6 +22,7 @@ jobs:
         run: npm test
 
   lint:
+    needs: test
     runs-on: macos-latest
     steps:
       - name: Get repository code
@@ -35,6 +36,7 @@ jobs:
       - name: Lint application
         run: yarn lint
   build:
+    needs: lint
     runs-on: macos-latest
     steps:
       - name: Get repository code
